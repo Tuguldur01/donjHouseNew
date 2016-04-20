@@ -1,0 +1,101 @@
+<template name="contact">
+
+  <!-- Page Banner -->
+  <section class="page-banner" style="background-image:url(images/background/page-banner-bg-2.jpg);">
+    <div class="auto-container text-center">
+        <h1>Холбоо барих</h1>
+          <ul class="bread-crumb"><li><a href="/faq">FAQ</a></li> <li><a href="/faq">Түгээмэл асуугддаг асуулт</a></li></ul>
+      </div>
+  </section>
+
+  <!--Info Strip-->
+  <section class="info-strip">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="info-block text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                    <div class="icon hvr-radial-out"><span class="f-icon flaticon-pointing8"></span></div>
+                      <h4>Хаяг</h4>
+                      <p>Монгол улс, УБ, СХД, 4-р хороо, Алтан тариа ХК-ийн баруун урд "HOUSE CENTER"</p>
+                  </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="info-block text-center wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+                    <div class="icon hvr-radial-out"><span class="f-icon flaticon-email103"></span></div>
+                      <h4>Email</h4>
+                      <p><a href="mailto:donjhouse1@gmail.com">donjhouse1@gmail.com</a></p>
+                  </div>
+              </div>
+
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="info-block text-center wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                    <div class="icon hvr-radial-out"><span class="f-icon flaticon-telephone46"></span></div>
+                      <h4>Утас</h4>
+                      <p>7018-0313, 9698-9999, 9605-0333</p>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  <!--Contact Us Area-->
+  <section class="contact-us-area">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+               <!--Contact Form-->
+            <div class="col-md-7 col-sm-6 col-xs-12 contact-form wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <h2>Захиа бичих</h2>
+
+                  <form id="contact-form" method="post" action="sendemail.php">
+                      <div class="field-container clearfix">
+
+                          <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            <input type="text" name="username" value="" placeholder="Нэр*">
+                          </div>
+
+                          <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                            <input type="email" name="email" value="" placeholder="Email*">
+                          </div>
+
+                          <div class="clearfix"></div>
+
+                          <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <input type="text" name="subject" value="" placeholder="Гарчиг*">
+                          </div>
+
+                          <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <textarea name="message" placeholder="Текст"></textarea>
+                          </div>
+
+                          <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                            <button type="submit" name="submit-form" class="primary-btn hvr-bounce-to-left"><span class="btn-text">Илгээх</span> <strong class="icon"><span class="f-icon flaticon-letter110"></span></strong></button>
+                          </div>
+
+                      </div>
+                  </form>
+              </div>
+
+               <!--Map Area-->
+              <div class="col-md-5 col-sm-6 col-xs-12 map-area wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <h2>Газрын зураг</h2>
+                <div class="map-container">
+                  {{> googleMap name="contactMap" options=contactMapOptions}}
+                </div>
+
+              </div>
+
+          </div>
+      </div>
+  </section>
+  <style>
+      .map-container {
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    }
+  </style>
+</template>

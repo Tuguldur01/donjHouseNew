@@ -1,0 +1,212 @@
+<template name="mainLayout">
+
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+
+    <!-- Main Header -->
+    <header class="main-header style-one">
+    	<!-- Header Top -->
+    	<div class="header-top">
+        	<div class="auto-container clearfix">
+
+                <!-- Top Left -->
+                <div class="top-left pull-left clearfix">
+                	<div class="email pull-left"><a href="mailto:donjhouse1@gmail.com"><span class="f-icon flaticon-email145"></span> donjhouse1@gmail.com</a></div>
+                    <div class="phone pull-left"><a href="#"><span class="f-icon flaticon-phone325"></span> 7018-0313, 9698-9999, 9605-0333</a></div>
+                </div>
+
+                <!-- Top Right -->
+                <nav class="top-right pull-right">
+                	<ul>
+                    	<li><a href="/">Site map</a></li>
+                        <li><a href="#">Сэтгүүл</a></li>
+                        <li><a href="#">Ажлын байр</a></li>
+                        <li><a href="#">Барилгын материал</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Search Box -->
+        <div class="search-box toggle-box">
+        	<div class="auto-container clearfix">
+
+                <!-- Search Form -->
+                <div class="search-form">
+                	<form method="post" action="index.html">
+                        <div class="form-group">
+							<input type="search" name="search" value="" placeholder="Search">
+                            <button class="search-submit" type="submit"><span class="f-icon flaticon-magnifying-glass16"></span></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Header Lower -->
+        <div class="header-lower">
+        	<div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo"><a href="/"><img src="images/logo-1.jpg" alt="Donj House" title="Donj House"></a></div>
+
+                <!--Right Container-->
+                <div class="right-cont clearfix">
+                	<div class="search-btn">
+                    	<div class="f-icon flaticon-magnifying47"></div>
+                        <span class="curve"></span>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="/">Эхлэл</a></li>
+                                <li><a href="/howitworks">Ажлын дараалал</a></li>
+                                <li class="dropdown"><a>Үйлчилгээ</a>
+                                    <ul class="submenu">
+                                        <li><a href="/suudrevch">Сүүдрэвч</a></li>
+                                        <li><a href="/bassein">Бассейн</a></li>
+                                        <li><a href="/mdotorlogoo">Модон Доторлогоо</a></li>
+                                        <li><a href="/gtohijilt">Гадна тохижилт</a></li>
+                                        <li><a href="/ghudag">Гүний худаг</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="/zagvaruud">Загварууд</a>
+                                    <ul class="submenu">
+                                        <li><a href="/zagvaruud/elite">1. Элит хаус</a></li>
+                                        <li><a href="/zagvaruud/modern">2. Модерн хаус</a></li>
+                                        <li><a href="/zagvaruud/songodog">3. Сонгодог хаус</a></li>
+                                        <li><a href="/zagvaruud/dunzen">4. Дүнзэн хаус</a></li>
+                                        <li><a href="/zagvaruud/canada">5. Канад хаус</a></li>
+                                        <li><a href="/zagvaruud/engiin">6. Энгийн хаус</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a>Хотхонууд</a>
+                                    <ul class="submenu">
+                                        <li><a href="/zuunnast">Зуун наст хотхон</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/contact">Холбоо барих</a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+
+                        </div>
+                    </nav>
+                    <!-- Main Menu End-->
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </header>
+    <!--End Main Header -->
+
+
+    {{>Template.dynamic template=content}}
+
+      <!--Main Footer-->
+      <footer class="main-footer">
+          <div class="auto-container">
+
+              <!--Subscribe Area-->
+              <div class="subscribe-area">
+              	<div class="subs-box">
+
+                  	<div class="row clearfix">
+                          <h2 class="col-md-6 col-sm-12 col-xs-12 pull-left">Бидэн рүү мэйл <span>илгээх</span></h2>
+
+                          <!--Form Box-->
+                          <div class="form-box col-md-6 col-sm-12 col-xs-12  pull-right">
+                              <form method="post" action="index.html">
+                                  <div class="form-group">
+                                      <input type="email" name="email" value="" placeholder="Enter Email" required>
+                                      <button type="submit"><span class="icon fa fa-paper-plane"></span></button>
+                                  </div>
+                              </form>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <!--Footer Widget Area-->
+              <div class="footer-widget-area clearfix">
+
+              	<!--Footer Widget-->
+                  <article class="footer-widget about-widget col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                  	<h3><img src="images/logo-1.jpg" alt=""></h3>
+                      <div class="widget-content">
+                      	<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.</p>
+                          <p>some form There are many variations of passages of Lorem Ipsum available, but the</p>
+                      </div>
+                  </article>
+
+                  <!--Footer Widget-->
+                  <article class="footer-widget quick-links col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+                  	<h3>Quick Links</h3>
+                      <div class="widget-content">
+                      	<ul>
+                              <li><span class="fa fa-angle-right"></span> <a href="#">FAQ</a></li>
+                              <li><span class="fa fa-angle-right"></span> <a href="#">Support</a></li>
+                              <li><span class="fa fa-angle-right"></span> <a href="#">Sitemap</a></li>
+                              <li><span class="fa fa-angle-right"></span> <a href="#">Blog</a></li>
+                              <li><span class="fa fa-angle-right"></span> <a href="#">Community</a></li>
+                          </ul>
+                      </div>
+                  </article>
+
+                  <!--Footer Widget-->
+                  <article class="footer-widget address col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                  	<h3>Хаяг</h3>
+                      <div class="widget-content">
+                      	<ul class="info">
+                          	<li><span class="fa fa-map-marker"></span> &ensp; УБ, СХД, 4-р хороо, Алтан тариа ХК-ийн баруун урд "HOUSE CENTER"</li>
+                              <li><span class="fa fa-phone"></span> &ensp; 7018-0313, 9698-9999, 9605-0333</li>
+                              <li><span class="fa fa-envelope"></span> &ensp; <a href="mailto:donjhouse1@gmail.com">donjhouse1@gmail.com</a></li>
+                          </ul>
+
+                          <div class="social"><a class="img-circle fa fa-facebook-f" href="#"></a> <a class="img-circle fa fa-twitter" href="#"></a> <a class="img-circle fa fa-google-plus" href="#"></a> <a class="img-circle fa fa-linkedin" href="#"></a></div>
+                      </div>
+                  </article>
+
+                  <!--Footer Widget-->
+                  <article class="footer-widget latest-work col-md-3 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1000ms">
+                  	<h3>Хийсэн ажилууд</h3>
+                      <div class="widget-content">
+                      	<div class="clearfix">
+                          	<figure class="image"><a class="lightbox-image" href="images/resource/insta-feed1.jpg"><img src="images/resource/insta-feed1.jpg" alt=""></a></figure>
+                              <figure class="image"><a class="lightbox-image" href="images/resource/insta-feed2.jpg"><img src="images/resource/insta-feed2.jpg" alt=""></a></figure>
+                              <figure class="image"><a class="lightbox-image" href="images/resource/insta-feed3.jpg"><img src="images/resource/insta-feed3.jpg" alt=""></a></figure>
+                              <figure class="image"><a class="lightbox-image" href="images/resource/insta-feed3.jpg"><img src="images/resource/insta-feed3.jpg" alt=""></a></figure>
+                              <figure class="image"><a class="lightbox-image" href="images/resource/insta-feed1.jpg"><img src="images/resource/insta-feed1.jpg" alt=""></a></figure>
+                              <figure class="image"><a class="lightbox-image" href="images/resource/insta-feed2.jpg"><img src="images/resource/insta-feed2.jpg" alt=""></a></figure>
+                          </div>
+                      </div>
+                  </article>
+
+              </div>
+          </div>
+
+          <!--Footer Bottom-->
+          <div class="footer-bottom">
+          	<div class="auto-container text-center">Made By <a href="#">Tuguldur</a> With <a href="#">Love</a></div>
+          </div>
+
+  	</footer><!--Main Footer End-->
+</div>
+</template>
