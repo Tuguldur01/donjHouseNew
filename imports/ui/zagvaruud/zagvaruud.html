@@ -14,7 +14,13 @@
         </div>
     </section>
 
-
+{{#each Zagvars}}
+    <ul>
+        <li>Category: {{turul}} | {{_id}} - {{title}} - {{tailbar}} - {{plan}} - {{taluud}} - {{deerees}} - {{ogtlol}} - {{createdAt}}
+            <button class="delete">&times;</button>
+        </li>
+    </ul>
+{{/each}}
     <!--Our Projects-->
     <section class="our-projects with-margin">
     	<div class="auto-container">
@@ -29,30 +35,30 @@
 
             <!--Filters Nav-->
             <ul class="filter-tabs clearfix anim-3-all">
-                <li class="filter" data-role="button" data-filter="all"><span class="btn-txt">All</span></li>
-                <li class="filter" data-role="button" data-filter="buildings"><span class="btn-txt">Buildings</span></li>
-                <li class="filter" data-role="button" data-filter="dunz"><span class="btn-txt">Hospital</span></li>
-                <li class="filter" data-role="button" data-filter="school"><span class="btn-txt">school</span></li>
-                <li class="filter" data-role="button" data-filter="isolation"><span class="btn-txt">Isolation</span></li>
-                <li class="filter" data-role="button" data-filter="mall"><span class="btn-txt">Mall</span></li>
-                <li class="filter" data-role="button" data-filter="others"><span class="btn-txt">Others</span></li>
+                <li class="filter" data-role="button" data-filter="all"><span class="btn-txt">Бүгд</span></li>
+                <li class="filter" data-role="button" data-filter="elite"><span class="btn-txt">Элит хаус</span></li>
+                <li class="filter" data-role="button" data-filter="modern"><span class="btn-txt">Модерн хаус</span></li>
+                <li class="filter" data-role="button" data-filter="songodog"><span class="btn-txt">Сонгодог хаус</span></li>
+                <li class="filter" data-role="button" data-filter="dunzen"><span class="btn-txt">Дүнзэн хаус</span></li>
+                <li class="filter" data-role="button" data-filter="kanad"><span class="btn-txt">Канад хаус</span></li>
+                <li class="filter" data-role="button" data-filter="engiin"><span class="btn-txt">Энгийн хаус</span></li>
             </ul>
         </div>
 
         <!--Projects Container-->
         <div class="projects-container filter-list clearfix wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
-
-            <article class="project-box mix mix_all {{category}}">
+{{#each Zagvars}}
+            <article class="project-box mix mix_all {{turul}}">
             	<figure class="image"><img src="images/resource/proj-image-1.jpg" alt=""><a href="images/resource/proj-image-1.jpg" class="lightbox-image zoom-icon"></a></figure>
                 <div class="text-content">
                 	<div class="text">
                     	<span class="cat">Isolation</span>
-                        <h4>Isolation</h4>
+                        <h4>{{turul}}</h4>
                     </div>
                 </div>
             </article>
-
-            <article class="project-box mix mix_all others">
+{{/each}}
+            <article class="project-box mix mix_all modern">
             	<figure class="image"><img src="images/resource/proj-image-2.jpg" alt=""><a href="images/resource/proj-image-2.jpg" class="lightbox-image zoom-icon"></a></figure>
                 <div class="text-content">
                 	<div class="text">
@@ -61,7 +67,7 @@
                     </div>
                 </div>
             </article>
-
+<!--
             <article class="project-box mix mix_all isolation ">
             	<figure class="image"><img src="images/resource/proj-image-3.jpg" alt=""><a href="images/resource/proj-image-3.jpg" class="lightbox-image zoom-icon"></a></figure>
                 <div class="text-content">
@@ -110,17 +116,8 @@
                         <h4>Hospital > dunz</h4>
                     </div>
                 </div>
-            </article>
+            </article> -->
 
-            <article class="project-box mix mix_all mall">
-            	<figure class="image"><img src="images/resource/proj-image-7.jpg" alt=""><a href="images/resource/proj-image-7.jpg" class="lightbox-image zoom-icon"></a></figure>
-                <div class="text-content">
-                	<div class="text">
-                    	<span class="cat">Others</span>
-                        <h4>Make concept</h4>
-                    </div>
-                </div>
-            </article>
 
         </div>
     </section>

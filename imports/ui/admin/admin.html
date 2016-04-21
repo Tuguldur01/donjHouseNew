@@ -1,10 +1,43 @@
 <template name="admin">
-  <h1>admin</h1>
+  <h1>Admin хэсэг</h1>
   <div class="container">
     <form class="new-task">
-          <input type="text" name="title" placeholder="Гарчиг" />
-          <button type="sumbit">submit</button>
+        <div class="form-group">
+            <label>Гарчиг</label>
+            <input type="text" class="form-control" name="title" placeholder="Гарчиг">
+        </div>
+        <div class="form-group">
+            <label>Төрөл</label>
+            <select class="form-control" name="turul">
+              <option value="elite">Элит хаус</option>
+              <option value="modern">Модерн хаус</option>
+              <option value="songodog">Сонгодог хаус</option>
+              <option value="dunzen">Дүнзэн хаус</option>
+              <option value="kanad">Канад хаус</option>
+              <option value="engiin">Энгийн хаус</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Тайлбар</label>
+            <input type="text" class="form-control" name="tailbar" placeholder="Тайлбар" />
+        </div>
+        <div class="form-group">
+            <label>Plans</label>
+            <input type="text" class="form-control" name="plan" placeholder="Plans" />
+        </div>
+        <div class="form-group">
+            <label>taluud</label>
+            <input type="text" class="form-control" name="taluud" placeholder="taluud" />
+        </div>
+        <div class="form-group">
+            <label>deerees</label>
+            <input type="text" class="form-control" name="deerees" placeholder="deerees" />
+        </div>
+        <div class="form-group">
+            <label>ogtlol</label>
+            <input type="text" class="form-control" name="ogtlol" placeholder="ogtlol" />
+        </div>
+        <button type="submit" class="btn btn-default">Нэмэх</button>
     </form>
   </div>
-
 </template>

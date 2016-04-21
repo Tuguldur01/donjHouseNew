@@ -6,17 +6,36 @@ Template.admin.events({
     // Prevent default browser form submit
     event.preventDefault();
 
-    // Get value from form element
+    // elment ees utgaa awah
     const target = event.target;
     const title = target.title.value;
+    const turul = target.turul.value;
+    const tailbar = target.tailbar.value;
+    const plan = target.plan.value;
+    const taluud = target.taluud.value;
+    const deerees = target.deerees.value;
+    const ogtlol = target.ogtlol.value;
 
-    // Insert a task into the collection
+    // collection ruu data nemeh
     zagvaruud.insert({
       title,
-      createdAt: new Date(), // current time
+      turul,
+      tailbar,
+      tailbar,
+      plan,
+      taluud,
+      deerees,
+      ogtlol,
+      createdAt: new Date(), // odoogiin tsag
     });
 
-    // Clear form
+    // form tseverleh
     target.title.value = '';
+    target.turul.value = '';
+    target.tailbar.value = '';
+    target.plan.value = '';
+    target.taluud.value = '';
+    target.deerees.value = '';
+    target.ogtlol.value = '';
   },
 })
