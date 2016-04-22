@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor'
 import "./admin.html";
 import { zagvaruud } from '../../api/zagvaruud.js';
 
@@ -5,7 +6,8 @@ Template.admin.events({
   'submit .new-task'(event) {
     // Prevent default browser form submit
     event.preventDefault();
-
+    console.log(Meteor.userId());
+    console.log(Meteor.user().emails);
     // elment ees utgaa awah
     const target = event.target;
     const title = target.title.value;
