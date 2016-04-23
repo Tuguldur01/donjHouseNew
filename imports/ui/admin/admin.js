@@ -2,12 +2,28 @@ import { Meteor } from 'meteor/meteor'
 import "./admin.html";
 import { zagvaruud } from '../../api/zagvaruud.js';
 
+Template.admin.helpers({
+  Zagvars() {
+    return zagvaruud.find({});
+  },
+});
+
+Template.admin.events({
+    "click .delete"() {
+        if (confirm("Усгахад итгэлтэй байна уу?")) {
+            zagvaruud.remove({_id:this._id});
+        } else {
+            // yu ch bitgii hii
+        }
+    }
+});
+
+
 Template.admin.events({
   'submit .new-task'(event) {
     // Prevent default browser form submit
     event.preventDefault();
-    console.log(Meteor.userId());
-    console.log(Meteor.user().emails);
+    console.log(Meteor.user().username);
     // elment ees utgaa awah
     const target = event.target;
     const title = target.title.value;
@@ -28,6 +44,7 @@ Template.admin.events({
       taluud,
       deerees,
       ogtlol,
+      oruulsan: Meteor.user().username,
       createdAt: new Date(), // odoogiin tsag
     });
 

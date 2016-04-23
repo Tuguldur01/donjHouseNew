@@ -1,43 +1,84 @@
 <template name="admin">
-  <h1>Admin хэсэг</h1>
-  <div class="container">
-    <form class="new-task">
-        <div class="form-group">
-            <label>Гарчиг</label>
-            <input type="text" class="form-control" name="title" placeholder="Гарчиг">
+
+
+  {{#if currentUser}}
+    <h1>Admin хэсэг</h1>
+
+    <div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#addPlan" aria-controls="addPlan" role="tab" data-toggle="tab">План нэмэх</a></li>
+      <li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">Оруулсан планууд</a></li>
+      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Админ нэмэх</a></li>
+      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="addPlan">
+        <div class="container">
+          <form class="new-task">
+              <div class="form-group">
+                  <label>Гарчиг</label>
+                  <input type="text" class="form-control" name="title" placeholder="Гарчиг">
+              </div>
+              <div class="form-group">
+                  <label>Төрөл</label>
+                  <select class="form-control" name="turul">
+                    <option value="elite">Элит хаус</option>
+                    <option value="modern">Модерн хаус</option>
+                    <option value="songodog">Сонгодог хаус</option>
+                    <option value="dunzen">Дүнзэн хаус</option>
+                    <option value="kanad">Канад хаус</option>
+                    <option value="engiin">Энгийн хаус</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label>Тайлбар</label>
+                  <input type="text" class="form-control" name="tailbar" placeholder="Тайлбар" />
+              </div>
+              <div class="form-group">
+                  <label>Plans</label>
+                  <input type="text" class="form-control" name="plan" placeholder="Plans" />
+              </div>
+              <div class="form-group">
+                  <label>taluud</label>
+                  <input type="text" class="form-control" name="taluud" placeholder="taluud" />
+              </div>
+              <div class="form-group">
+                  <label>deerees</label>
+                  <input type="text" class="form-control" name="deerees" placeholder="deerees" />
+              </div>
+              <div class="form-group">
+                  <label>ogtlol</label>
+                  <input type="text" class="form-control" name="ogtlol" placeholder="ogtlol" />
+              </div>
+              <button type="submit" class="btn btn-default">Нэмэх</button>
+          </form>
         </div>
-        <div class="form-group">
-            <label>Төрөл</label>
-            <select class="form-control" name="turul">
-              <option value="elite">Элит хаус</option>
-              <option value="modern">Модерн хаус</option>
-              <option value="songodog">Сонгодог хаус</option>
-              <option value="dunzen">Дүнзэн хаус</option>
-              <option value="kanad">Канад хаус</option>
-              <option value="engiin">Энгийн хаус</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Тайлбар</label>
-            <input type="text" class="form-control" name="tailbar" placeholder="Тайлбар" />
-        </div>
-        <div class="form-group">
-            <label>Plans</label>
-            <input type="text" class="form-control" name="plan" placeholder="Plans" />
-        </div>
-        <div class="form-group">
-            <label>taluud</label>
-            <input type="text" class="form-control" name="taluud" placeholder="taluud" />
-        </div>
-        <div class="form-group">
-            <label>deerees</label>
-            <input type="text" class="form-control" name="deerees" placeholder="deerees" />
-        </div>
-        <div class="form-group">
-            <label>ogtlol</label>
-            <input type="text" class="form-control" name="ogtlol" placeholder="ogtlol" />
-        </div>
-        <button type="submit" class="btn btn-default">Нэмэх</button>
-    </form>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="plans">
+        {{#each Zagvars}}
+            <ul>
+                <li>Category: {{turul}} | {{_id}} - {{title}} - {{tailbar}} - {{plan}} - {{taluud}} - {{deerees}} - {{ogtlol}} - {{createdAt}} - {{oruulsan}}
+                    <button class="delete">&times;</button>
+                </li>
+            </ul>
+        {{/each}}
+      </div>
+      <div role="tabpanel" class="tab-pane" id="messages">message.</div>
+      <div role="tabpanel" class="tab-pane" id="settings">settings.</div>
+    </div>
+
   </div>
+  {{else}}
+  <div class="container">
+    {{> atForm}}
+  </div>
+  {{/if}}
+
+
+
 </template>

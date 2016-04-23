@@ -23,5 +23,9 @@ kadira:flow-router
 kadira:blaze-layout
 meteortoys:allthings
 dburles:google-maps
-accounts-ui
+accounts-base
 accounts-password
+useraccounts:core
+useraccounts:unstyled
+raix:handlebar-helpers
+useraccounts:bootstrap
