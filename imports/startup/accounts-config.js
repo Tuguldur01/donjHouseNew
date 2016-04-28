@@ -1,55 +1,35 @@
 import { Accounts } from 'meteor/accounts-base';
 
+var myPostLogout = function(){
+    //example redirect after logout
+    Router.go('/home');
+};
+
 AccountsTemplates.configure({
-    // Behavior
-    confirmPassword: true,
-    enablePasswordChange: true,
-    forbidClientAccountCreation: false,
-    overrideLoginErrors: true,
-    sendVerificationEmail: false,
-    lowercaseUsername: false,
-    focusFirstInput: true,
-
-    // Appearance
-    showAddRemoveServices: false,
-    showForgotPasswordLink: false,
-    showLabels: true,
-    showPlaceholders: true,
-    showResendVerificationEmailLink: false,
-
-    // Client-side Validation
-    continuousValidation: false,
-    negativeFeedback: false,
-    negativeValidation: true,
-    positiveValidation: true,
-    positiveFeedback: true,
-    showValidating: true,
-
-    // Privacy Policy and Terms of Use
-    privacyUrl: 'privacy',
-    termsUrl: 'terms-of-use',
-
-    // Redirects
-    homeRoutePath: '/home',
-    redirectTimeout: 4000,
-
-    // Hooks
-    onLogoutHook: myLogoutFunc,
-    onSubmitHook: mySubmitFunc,
-    preSignUpHook: myPreSubmitFunc,
-    postSignUpHook: myPostSubmitFunc,
-
-    // Texts
     texts: {
-      button: {
-          signUp: "Бүртгүүлэх"
-      },
-      socialSignUp: "Бүртгүүлэх",
-      socialIcons: {
-          "meteor-developer": "fa fa-rocket"
-      },
       title: {
-          forgotPwd: "Нууц үгээ сэргээх"
-      },
-    },
+        // changePwd: "Password Title",
+        // enrollAccount: "Enroll Title",
+        // forgotPwd: "Forgot Pwd Title",
+        // resetPwd: "Reset Pwd Title",
+        signIn: "Нэвтрэх",
+        // signUp: "Sign Up Title",
+        // verifyEmail: "Verify Email Title",
+      }
+    }
+});
+AccountsTemplates.configure({
+    texts: {
+        button: {
+          changePwd: "Password Text",
+          enrollAccount: "Enroll Text",
+          forgotPwd: "Forgot Pwd Text",
+          resetPwd: "Reset Pwd Text",
+          signIn: "Нэвтрэх",
+          signUp: "Sign Up Text",
+        }
+    }
+});
+AccountsTemplates.configure({
+    forbidClientAccountCreation: true
 });

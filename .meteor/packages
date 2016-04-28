@@ -16,16 +16,20 @@ standard-minifier-js    # JS minifier run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
+autopublish
 
+tomwasd:flow-router-autoscroll
 kadira:flow-router
 kadira:blaze-layout
 meteortoys:allthings
 dburles:google-maps
+
 accounts-base
 accounts-password
 useraccounts:core
 useraccounts:unstyled
-raix:handlebar-helpers
-useraccounts:bootstrap
+
+aldeed:simple-schema
+aldeed:collection2
+aldeed:autoform
+vimes1984:autoform-textangular

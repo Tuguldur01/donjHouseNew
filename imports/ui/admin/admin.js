@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import "./admin.html";
 import { zagvaruud } from '../../api/zagvaruud.js';
+import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 Template.admin.helpers({
   Zagvars() {
@@ -11,7 +12,7 @@ Template.admin.helpers({
 Template.admin.events({
     "click .delete"() {
         if (confirm("Усгахад итгэлтэй байна уу?")) {
-            zagvaruud.remove({_id:this._id});
+            Meteor.call("zagvaruud.remove", this._id);
         } else {
             // yu ch bitgii hii
         }

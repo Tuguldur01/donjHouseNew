@@ -115,3 +115,19 @@ FlowRouter.route('/admin', {
     BlazeLayout.render("mainLayout", {content: "admin"});
   }
 });
+
+FlowRouter.notFound = {
+    action: function() {
+        BlazeLayout.render("notFound");
+    }
+};
+//
+// FlowRouter.notFound = {
+//   action: function() {
+//     BlazeLayout.render('masterLayout', {
+//       footer: "footer",
+//       main: "pageNotFound",
+//       nav: "nav",
+//     });
+//   }
+// };
