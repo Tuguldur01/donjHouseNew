@@ -8,6 +8,7 @@ import '../imports/ui/zagvaruud/zagvaruud.js';
 import '../imports/ui/mainLayout/mainLayout.js';
 import '../imports/ui/contact/contact.js';
 import '../imports/ui/admin/admin.js';
+import '../imports/ui/zuunnast/zuunnast.js';
 import '../imports/startup/accounts-config.js';
 import { zagvaruud } from '/imports/api/zagvaruud.js';
 

@@ -1,3 +1,166 @@
 <template name="howitworks">
-  <h1>howitworks</h1>
+<!-- skrallax -->
+<div id="title" class="slide header">
+  <h1>1. Загвар сонгох</h1><br>
+  <p>
+    - Манай чадварлаг мэргэжлийн зургийн баг үйлчилж барилгийн зургийг тань иж бүрэн гаргах болно<br>
+    - Та хүссэн байшингийн загвараа манай шилмэл цомгоос сонгож болно.<br>
+    - Хэрэв танд байшингийн загвар сонгоход бэрхшээлтэй байвал бид танд дуртайяа тусална.<br>
+    - Таны өмнө сонгосон, хүссэн байшингийн загвар байвал бид хамтран ажиллахад бэлэн байна.
+    </p>
+</div>
+
+<div id="slide1" class="slide">
+  <div class="title">
+    <h1>2. Газар үзэж, байршил сонгох.</h1><br>
+    <p>
+      - Манай мэргэжилтнүүд таны эзэмшил газарт очиж, шаардлагатай шинжилгээ, судалгаа хийнэ.<br>
+      - Танд барилгын байршил болон хэлбэр хийцийг хамгийн зөв, оновчтой сонгоход тусална.
+    </p>
+  </div>
+</div>
+
+<div id="slide2" class="slide">
+  <div class="title">
+    <h1>3. Төлбөр тооцоо хийх</h1><br>
+    <p>
+      - Бид төлбөр тооцооны уян хатан байдлыг эрхэмлэдэг.<br>
+      - Та ердөө урьдчилгаа 30% төлөөд л гэрээгээ хийж болно.<br>
+      - Бид таны саналыг харгалзан төлбөр хийх хуваарь гаргаж өгнө.
+    </p>
+  </div>
+</div>
+
+<div id="slide3" class="slide">
+  <div class="title">
+    <h1>4. Барилга барих</h1><br>
+    <p>
+      - Манай чадварлаг мэргэжилтнүүд таны шаардлагад нийцүүлэн танай сууцыг чанартай, түргэн шуурхай хугацаанд нь барьж өгнө.<br>
+      - Бид таны байшинг Монгол Улсын барилгын стандарт, норм дүрэм, хэм хэмжээ, дарааллыг нарийн чанд баримтлан барьж өгнө.
+      </p>
+  </div>
+</div>
+
+<div id="slide2" class="slide">
+  <div class="title">
+    <h1>5. Дурсамжаа бүтээ</h1><br>
+    <p>
+      - Өөрийн хүссэн орд харштай болох нь өрх айл бүрийн аз жаргал юм.<br>
+      - Та өөрийн байшиндаа гэр бүлийнхээ сайхан дурсамжийг бүтээгээрэй.<br>
+      - Та түлхүүрээ ав. Танд аз жаргал хүсье.
+      </p>
+  </div>
+</div>
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/revolution.min.js"></script>
+  <script src="js/bxslider.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.mixitup.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/script.js"></script>
+
+  <style media="screen">
+  @import url(http://fonts.googleapis.com/css?family=Nunito);
+
+
+h1 {
+ font-size: 250%
+}
+
+p {
+  line-height: 150%;
+}
+
+.slide {
+position: relative;
+padding: 25vh 10%;
+min-height: 100vh;
+width: 100vw;
+box-sizing: border-box;
+box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+transform-style: inherit;
+}
+
+#img {
+position: absolute;
+top: 50%;
+left: 35%;
+width: 320px;
+height: 240px;
+transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+padding: 10px;
+border-radius: 5px;
+background: rgba(240,230,220, .7);
+box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+#img:last-of-type {
+transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left:0;
+right:0;
+}
+
+.title {
+width: 55%;
+padding: 5%;
+border-radius: 5px;
+background: rgba(240,230,220, .7);
+box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+margin-left: 0;
+margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+margin-left: auto;
+margin-right: 0;
+}
+
+.slide, .slide:before {
+background: 50% 50% / cover;
+}
+
+.header {
+text-align: center;
+font-size: 175%;
+color: #fff;
+text-shadow: 0 2px 2px #000;
+}
+
+#title {
+background-image: url("http://lorempixel.com/640/480/abstract/6/");
+ background-attachment: fixed;
+}
+
+#slide1:before {
+background-image: url("http://lorempixel.com/640/480/abstract/4/");
+transform: translateZ(-1px) scale(2);
+z-index:-1;
+}
+
+#slide2 {
+background-image: url("http://lorempixel.com/640/480/abstract/3/");
+background-attachment: fixed;
+}
+
+#slide3:before {
+background-image: url("http://lorempixel.com/640/480/abstract/5/");
+transform: translateZ(-1px) scale(2);
+z-index:-1;
+}
+
+  </style>
 </template>
